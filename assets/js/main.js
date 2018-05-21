@@ -1,0 +1,1 @@
+$(function(){$(".items .item").imgLiquid()}),$(function(){$(".project .item").imgLiquid()});
