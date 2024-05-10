@@ -1,4 +1,12 @@
 {
-  "plugins": ["sonar"],
-  "extends": ["next/core-web-vitals", "eslint:recommended", "plugin:sonar/recommended"]
+  "plugins": [
+    "sonar",
+    "prettier"
+  ],
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:sonar/recommended",
+    "plugin:prettier/recommended"
+  ]
 }
