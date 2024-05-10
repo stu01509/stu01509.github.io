@@ -1,3 +1,4 @@
 {
-  "extends": "next/core-web-vitals"
+  "plugins": ["sonar"],
+  "extends": ["next/core-web-vitals", "eslint:recommended", "plugin:sonar/recommended"]
 }
