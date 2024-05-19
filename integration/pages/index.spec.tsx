@@ -8,6 +8,6 @@ describe('pages > index.tsx', () => {
 
   it('should be able to render the HomePage page', () => {
     const { getByText } = renderHomePage();
-    expect(getByText('Hello World')).toBeInTheDocument();
+    expect(getByText('Cliff Su')).toBeInTheDocument();
   });
 });

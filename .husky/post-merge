@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+IFS=$'\n'
+
+PNPM_LOCK_REGEX="^pnpm-lock\.json"
+
+PACKAGES=("$(git diff --name-only HEAD@{1} HEAD | grep -E "$PNPM_LOCK_REGEX")")
+
+if [[ ${PACKAGES[@]} ]]; then
+  for package in $PACKAGES; do
+    echo "📦 $package has been updated, running pnpm install to update the dependencies."
+    DIR=$(dirname package)
+    cd "$DIR" && npm install
+  done
+fi
