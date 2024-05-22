@@ -14,6 +14,7 @@ const navbarStyle = {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
 
     @media (${MEDIA_QUERIES.TABLET}) {
       padding: 16px 32px;
