@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import Navbar, { TNavbarItemProps } from '@/src/components/Navbar';
 import Banner from '@/src/components/Banner';
+import Footer from '@/src/components/Footer';
 
 export default function Home() {
   const projectRef = useRef<HTMLElement | null>(null);
@@ -29,6 +30,7 @@ export default function Home() {
       <Navbar items={NAVBAR_ITEMS} />
       <Banner />
       {/* <h1 ref={projectRef}>Project</h1> */}
+      <Footer />
     </>
   );
 }
