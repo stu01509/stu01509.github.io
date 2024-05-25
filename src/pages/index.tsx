@@ -2,9 +2,10 @@ import { useRef } from 'react';
 import Navbar, { TNavbarItemProps } from '@/src/components/Navbar';
 import Banner from '@/src/components/Banner';
 import Footer from '@/src/components/Footer';
+import Project from '@/src/components/Project';
 
 export default function Home() {
-  const projectRef = useRef<HTMLElement | null>(null);
+  const projectRef = useRef<HTMLDivElement>(null);
 
   const NAVBAR_ITEMS: TNavbarItemProps[] = [
     {
@@ -14,7 +15,7 @@ export default function Home() {
       },
     },
     {
-      name: 'AWARDS',
+      name: 'AWARD',
       onClick: () => {},
     },
     {
@@ -29,7 +30,7 @@ export default function Home() {
     <>
       <Navbar items={NAVBAR_ITEMS} />
       <Banner />
-      {/* <h1 ref={projectRef}>Project</h1> */}
+      <Project ref={projectRef} />
       <Footer />
     </>
   );
