@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
-const projectStyle = {
-  projectContainer: css`
+const awardStyle = {
+  awardContainer: css`
     margin-top: 48px;
     display: flex;
     justify-content: center;
@@ -13,15 +13,18 @@ const projectStyle = {
   title: css`
     font-size: 32px;
   `,
-  itemContainer: css`
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 16px;
+  tr: css`
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.075);
+    }
   `,
-  item: css`
-    margin: 0 auto;
+  td: css`
+    padding: 12px;
+  `,
+  link: css`
+    text-decoration: none;
+    color: #007bff;
   `,
 };
 
-export default projectStyle;
+export default awardStyle;

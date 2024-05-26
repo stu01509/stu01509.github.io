@@ -3,9 +3,11 @@ import Navbar, { TNavbarItemProps } from '@/src/components/Navbar';
 import Banner from '@/src/components/Banner';
 import Footer from '@/src/components/Footer';
 import Project from '@/src/components/Project';
+import Award from '@/src/components/Award';
 
 export default function Home() {
   const projectRef = useRef<HTMLDivElement>(null);
+  const awardRef = useRef<HTMLDivElement>(null);
 
   const NAVBAR_ITEMS: TNavbarItemProps[] = [
     {
@@ -16,7 +18,9 @@ export default function Home() {
     },
     {
       name: 'AWARD',
-      onClick: () => {},
+      onClick: () => {
+        awardRef.current?.scrollIntoView({ behavior: 'smooth' });
+      },
     },
     {
       name: 'CV',
@@ -31,6 +35,7 @@ export default function Home() {
       <Navbar items={NAVBAR_ITEMS} />
       <Banner />
       <Project ref={projectRef} />
+      <Award ref={awardRef} />
       <Footer />
     </>
   );
