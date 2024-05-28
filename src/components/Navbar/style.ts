@@ -80,6 +80,7 @@ const navbarStyle = {
 
     button {
       width: 100%;
+      font-size: 16px;
       text-align: left;
       cursor: pointer;
       border: none;
