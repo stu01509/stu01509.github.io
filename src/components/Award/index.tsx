@@ -83,7 +83,7 @@ const Award = forwardRef<HTMLDivElement>((props, ref) => {
       <div css={style.contentContainer}>
         <h1 css={style.title}>Awards</h1>
         <hr />
-        <table>
+        <table css={style.table}>
           <tbody>
             {AWARD_ITEMS.map((item) => {
               return (

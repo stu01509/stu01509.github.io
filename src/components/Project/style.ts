@@ -19,9 +19,6 @@ const projectStyle = {
     flex-wrap: wrap;
     margin-top: 16px;
   `,
-  item: css`
-    margin: 0 auto;
-  `,
 };
 
 export default projectStyle;

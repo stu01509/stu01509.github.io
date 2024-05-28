@@ -17,8 +17,8 @@ const ProjectItem: FC<TProjectItem> = (props) => {
       <Link href={url} target="_blank" css={style.itemContainer}>
         <Image
           src={imageUrl}
-          width={470}
-          height={260}
+          width={476}
+          height={270}
           alt={`${name} Project Image`}
           css={style.image}
         />
@@ -31,8 +31,8 @@ const ProjectItem: FC<TProjectItem> = (props) => {
     <div css={style.itemContainer}>
       <Image
         src={imageUrl}
-        width={470}
-        height={260}
+        width={476}
+        height={270}
         alt={`${name} Project Image`}
         css={style.image}
       />
