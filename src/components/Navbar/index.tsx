@@ -63,6 +63,7 @@ const Navbar: FC<TNavbarProps> = (props) => {
             }
           `}
           onClick={() => setIsShowNavbarDropdown((prev) => !prev)}
+          aria-label="Navbar Toggle Button"
         >
           <IconChevronDown />
         </button>

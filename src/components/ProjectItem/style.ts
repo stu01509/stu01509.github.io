@@ -2,9 +2,11 @@ import { css } from '@emotion/react';
 
 const projectItemStyle = {
   itemContainer: css`
+    min-width: 33.3%;
     margin: 24px auto;
     transition: opacity 0.3s ease;
     text-decoration: none;
+    text-align: center;
 
     &:hover {
       opacity: 0.5;

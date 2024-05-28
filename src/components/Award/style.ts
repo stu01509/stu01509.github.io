@@ -13,6 +13,9 @@ const awardStyle = {
   title: css`
     font-size: 32px;
   `,
+  table: css`
+    width: 100%;
+  `,
   tr: css`
     &:hover {
       background-color: rgba(0, 0, 0, 0.075);
