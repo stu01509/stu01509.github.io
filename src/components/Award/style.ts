@@ -5,7 +5,7 @@ const awardStyle = {
     margin-top: 48px;
     display: flex;
     justify-content: center;
-    scroll-margin-top: 60px;
+    scroll-margin-top: 56px;
   `,
   contentContainer: css`
     width: 75%;
