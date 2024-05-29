@@ -7,7 +7,7 @@ const bannerStyle = {
     align-items: center;
     justify-content: center;
     height: 450px;
-    margin-top: 60px;
+    margin-top: 56px;
     position: relative;
     background-color: #eee;
 
