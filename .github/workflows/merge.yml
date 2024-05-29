@@ -60,6 +60,18 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: ESLint Check
+        run: pnpm lint
+
+      - name: Unit Test
+        run: pnpm test:report
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.SONAR_CLOUD_GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
       - name: Build with Next.js
         run: pnpm next build
 

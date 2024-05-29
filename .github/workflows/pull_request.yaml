@@ -42,10 +42,16 @@ jobs:
         run: pnpm install
 
       - name: ESLint Check
-        run: pnpm test:report
+        run: pnpm lint
 
       - name: Unit Test
         run: pnpm test:report
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.SONAR_CLOUD_GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: Build
         run: pnpm build
