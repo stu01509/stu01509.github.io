@@ -9,6 +9,7 @@ const raleway = Raleway({
   weight: ['400', '700'],
 });
 
+const GA_TRACKING_ID = 'G-HZKFHY3ELE';
 const META_TITLE = 'Cliff Su';
 const META_DESCRIPTION =
   "Hi, I'm Cliff from Taiwan, an open-source enthusiast, and a remote work lover. My interests are Frontend, Backend and Android App.";
@@ -38,6 +39,22 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/favicon@192x192.png" />
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        />
       </Head>
       <div className={raleway.className}>
         <Component {...pageProps} />
