@@ -22,7 +22,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@emotion/react": "11.11.4",
+    "@emotion/react": "11.14.0",
     "@tsparticles/engine": "3.4.0",
     "@tsparticles/react": "3.0.0",
     "@tsparticles/slim": "3.4.0",
